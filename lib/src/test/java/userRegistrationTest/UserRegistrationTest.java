@@ -18,16 +18,14 @@ UserRegistration userRegistration = new UserRegistration();
     }
 
      @Test
- 	public void givenFirstName_WhenHasNumber_ShouldReturnFalse()
-     {
+ 	public void givenFirstName_WhenHasNumber_ShouldReturnFalse() {
  		boolean result = userRegistration.validateFirstName("Vagdevi52");
  		Assert.assertFalse(result);
  	}
 
     @Test
-    public void givenFirstName_WhenHasSpecialChar_ShouldReturnFalse()
-    {
-	boolean result = userRegistration.validateFirstName("V@devi");
+    public void givenFirstName_WhenHasSpecialChar_ShouldReturnFalse() {
+	boolean result = userRegistration.validateFirstName("d@vi");
 	Assert.assertFalse(result);
 }
     @Test
@@ -38,26 +36,23 @@ UserRegistration userRegistration = new UserRegistration();
 	
 	@Test 
 	public void givenLastName_WhenLessThanThreeChar_shouldReturnFalse() {
-		boolean result = userRegistration.validateLastName("De");
+		boolean result = userRegistration.validateLastName("de");
 		Assert.assertFalse(result);
 	}
 	
 	@Test
-	  public void givenLastName_WhenHasNumber_ShouldReturnFalse()
-	  {
-	      boolean result = userRegistration.validateFirstName("Dhulipala52");
+	  public void givenLastName_WhenHasNumber_ShouldReturnFalse() {
+	      boolean result = userRegistration.validateFirstName("dhulipala52");
 	      Assert.assertFalse(result);
 	  }
 
 	  @Test
-	  public void givenLastName_WhenHasSpecialChar_ShouldReturnFalse() 
-	  {
-	      boolean result = userRegistration.validateFirstName("Dhul@pala");
+	  public void givenLastName_WhenHasSpecialChar_ShouldReturnFalse() {
+	      boolean result = userRegistration.validateFirstName("v@devi");
 	      Assert.assertFalse(result);
 	  }
 	  @Test
-	    public void givenEmailId_WhenProper_ShouldReturnTrue()
-	    {
+	    public void givenEmailId_WhenProper_ShouldReturnTrue(){
 	        boolean result = userRegistration.validateEmailid("abc.syz@bl.co.in");
 	        Assert.assertTrue(result);
 	    }
@@ -68,7 +63,7 @@ UserRegistration userRegistration = new UserRegistration();
 	    }
 	    @Test
 	    public void givenMobileNum_WhenSpaceNotMentioned_ShouldReturnFalse() {
-	        boolean result = userRegistration.validateMobileNum("919993588735");
+	        boolean result = userRegistration.validateMobileNum("91578483588735");
 	        Assert.assertFalse(result);
 	    }
 
@@ -90,39 +85,46 @@ UserRegistration userRegistration = new UserRegistration();
 		}
 
 		@Test
-		public void givenPassword_WhenAtleast1UpperCase_ShouldReturnTrue() {
+		public void givenPassword_WhenAtleast1UpperCase_ShouldReturnTrue()
+		{
 			boolean result = userRegistration.validatePassword("3Rmdg*nK");
 			Assert.assertTrue(result);
 		}
 
 		@Test
-		public void givenPassword_WhenAtleast1Number_ShouldReturnTrue() {
+		public void givenPassword_WhenAtleast1Number_ShouldReturnTrue()
+		{
 			boolean result = userRegistration.validatePassword("Mas1bt&Bx");
 			Assert.assertTrue(result);
 		}
 
 		@Test
-		public void givenPassword_WhenNoNumeric_ShouldReturnFalse() {
-			boolean result = userRegistration.validatePassword("mDkk%fDB");
+		public void givenPassword_WhenNoNumeric_ShouldReturnFalse()
+		{
+			boolean result = userRegistration.validatePassword("Mdgy4B");
 			Assert.assertFalse(result);
 		}
 
 		@Test
-		public void givenPassword_WhenHasExact1SpecialChar_ShouldReturnTrue() {
+		public void givenPassword_WhenHasExact1SpecialChar_ShouldReturnTrue()
+		{
 			boolean result = userRegistration.validatePassword("mDkk%fD1");
 			Assert.assertTrue(result);
 		}
 
 		@Test
-		public void givenPassword_WhenNoSpecialChar_ShouldReturnFlase() {
+		public void givenPassword_WhenNoSpecialChar_ShouldReturnFlase()
+		{
 			boolean result = userRegistration.validatePassword("mDkkfD12");
 			Assert.assertTrue(result);
 		}
 
 		@Test
-		public void givenPassword_WhenHasMoreThan1SpecialChar_ShouldReturnFalse() {
+		public void givenPassword_WhenHasMoreThan1SpecialChar_ShouldReturnFalse()
+		{
 			boolean result = userRegistration.validatePassword("mDkk%f#D1");
 			Assert.assertTrue(result);
 		}
 
 	}
+
