@@ -45,14 +45,14 @@ UserRegistration userRegistration = new UserRegistration();
 	@Test
 	  public void givenLastName_WhenHasNumber_ShouldReturnFalse()
 	  {
-	      boolean result = userRegistration.validateFirstName("Dhulipala52");
+	      boolean result = userRegistration.validateLastName("Dhulipala52");
 	      Assert.assertFalse(result);
 	  }
 
 	  @Test
 	  public void givenLastName_WhenHasSpecialChar_ShouldReturnFalse() 
 	  {
-	      boolean result = userRegistration.validateFirstName("Dhul@pala");
+	      boolean result = userRegistration.validateLastName("Dhul@pala");
 	      Assert.assertFalse(result);
 	  }
 	  @Test
