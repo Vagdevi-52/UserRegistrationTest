@@ -42,13 +42,13 @@ UserRegistration userRegistration = new UserRegistration();
 	
 	@Test
 	  public void givenLastName_WhenHasNumber_ShouldReturnFalse() {
-	      boolean result = userRegistration.validateFirstName("dhulipala52");
+	      boolean result = userRegistration.validateLastName("dhulipala52");
 	      Assert.assertFalse(result);
 	  }
 
 	  @Test
 	  public void givenLastName_WhenHasSpecialChar_ShouldReturnFalse() {
-	      boolean result = userRegistration.validateFirstName("v@devi");
+	      boolean result = userRegistration.validateLastName("v@devi");
 	      Assert.assertFalse(result);
 	  }
 	  @Test
