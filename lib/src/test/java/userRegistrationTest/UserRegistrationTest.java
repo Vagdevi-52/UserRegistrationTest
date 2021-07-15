@@ -59,14 +59,14 @@ public class UserRegistrationTest
 	//Test case for last name when it has number. 
 	@Test
 	  public void givenLastName_WhenHasNumber_ShouldReturnFalse() {
-	      boolean result = userRegistration.validateFirstName("Dhulipala72");
+	      boolean result = userRegistration.validateLastName("Dhulipala72");
 	      Assert.assertFalse(result);
 	  }
 
 	  //Test case for last name when it has special charcter
 	  @Test
 	  public void givenLastName_WhenHasSpecialChar_ShouldReturnFalse() {
-	      boolean result = userRegistration.validateFirstName("dhul@pala");
+	      boolean result = userRegistration.validateLastName("dhul@pala");
 	      Assert.assertFalse(result);
 	  }
 	  //test case for emailid
