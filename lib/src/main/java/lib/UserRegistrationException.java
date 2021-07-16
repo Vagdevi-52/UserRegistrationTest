@@ -1,4 +1,4 @@
-package userRegistrationTest;
+package lib;
 
 public class UserRegistrationException extends Exception 
 {
